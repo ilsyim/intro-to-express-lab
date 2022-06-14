@@ -7,7 +7,7 @@ import { students } from './data/students-data.js'
 const app = express()
 
 // Configure the app (app.set)
-
+app.set('view engine', 'ejs')
 
 
 // Mount Middleware (app.use)
@@ -28,7 +28,7 @@ app.get('/home', function(req, res){
   res.render('home')
 })
 
-app.get('/', function(req, res){
+app.get('/students', function(req, res){
   res.render('students/index', {
     students: students
   })
