@@ -4,18 +4,18 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Student Index</title>
 </head>
 <body>
-  <h1>Students</h1>
+  <h1>Students List</h1>
   <ul>
-    <%students.forEach(element => { %>
+    <% students.forEach(student => { %>
       <li>
-        <%= students.text %>
+        <%= student.name %>
         -
-        <%= students.student ? 'student' : 'not student' %> 
+        <%= student.teen ? 'teen' : 'not teen' %>
       </li>
-    <% }); %>
+    <% }) %>
   </ul>
 </body>
 </html>
